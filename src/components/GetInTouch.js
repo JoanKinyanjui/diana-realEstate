@@ -3,11 +3,11 @@ import styles from '../styles/get.module.css'
 
 function GetInTouch() {
   return (
-    <div className='w-screen mt-12 pb-8' >
-        <div className={`${styles.GetInTouchDiv}  mx-auto`}>
+    <div className='w-screen mt-12 pb-8 md:py-8 ' >
+        <div className={`${styles.GetInTouchDiv}  mx-auto `}>
                <div className='grid md:gap-[25px] gap-[10px] '>
                <p className='text-[#FAA9FB] text-sm md:text-base mx-auto font-medium py-4 md:py-8'>GET IN TOUCH</p>
-                  <p  className='text-black text-bold md:text-[40px] text-[22px] mx-auto py-4 md:pb-8'>Featured Properties</p>
+                  <p  className='text-black text-bold md:text-[40px] text-[22px] mx-auto py-4 md:pb-8'>Free Consultation</p>
                </div>
 
                <div className='flex items-center md:gap-[30px] place-content-center md:pt-12 pt-8'>

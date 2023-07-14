@@ -6,7 +6,7 @@ import {LiaBedSolid} from 'react-icons/lia'
 
 function FeaturedProperties() {
   return (
-    <div className={`${styles.FeaturedComponent} grid place-content-center`}>
+    <div className={`${styles.FeaturedComponent} grid place-content-center py-12`}>
         <p className='text-[#FAA9FB] text-sm md:text-base mx-auto font-medium py-4 md:py-8'>OUR PROPERTIES</p>
         <p  className='text-black text-bold md:text-[40px] text-[22px] mx-auto py-4 md:pb-8'>Featured Properties</p>
         
@@ -15,7 +15,7 @@ function FeaturedProperties() {
      
       {properties.map((item)=>(
          <Grid item xs={12} sm={6} md={4} lg={3} key={item.id}>
-         <div className='grid  rounded-lg shadow-md hover:shadow-lg  md:py-8'>
+         <div className='grid  rounded-xl shadow-md hover:shadow-lg   md:pb-4 bg-white'>
             <div className={`${styles.SpecificHouseDiv} `}>
             <img src={item.image} className='rounded-md' />
             <p className={`${styles.PriceOfAHouse}`}>Ksh 20,000 </p>

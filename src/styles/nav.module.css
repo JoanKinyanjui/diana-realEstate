@@ -1,11 +1,11 @@
 .NavComponent{
     width: 100vw;
-    /* background :rgba(0, 0, 0, 0.1); */
-    background-color: white;
+    background :rgba(0, 0, 0, 0.1);
+    /* background-color: white; */
     /* opacity: 0.1; */
     height: max-content;
-    /* position: fixed; */
-    box-shadow: 2px 2px 5px gray;
+    position: fixed;
+    box-shadow: 2px 2px 5px rgb(73, 72, 72);
     top: 0;
 }
 

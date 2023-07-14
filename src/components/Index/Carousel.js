@@ -18,7 +18,7 @@ function Carousel() {
      
  <div>
  <Slider {...settings}>
-      <div className={`${styles.slide} w-full  md:h-[900px] h-[350px]`}>
+      <div className={`${styles.slide} w-full lg:h-[800px]  md:h-[700px] h-[350px]`}>
        <div className={`${styles.imageContainer} h-full`}>
        <img src="/images/image2.jpg" alt="Image 1" />
        <div className={`${styles.overlay}`}></div>
@@ -28,7 +28,7 @@ function Carousel() {
           <p>Find your yanctuary in the world of real estate</p>
         </div>
       </div>
-      <div  className={`${styles.slide} w-full  md:h-[900px] h-[350px]`}>
+      <div  className={`${styles.slide} w-full lg:h-[800px]  md:h-[700px] h-[350px]`}>
       <div className={`${styles.imageContainer}`}>
       <img src="/images/image4.jpg" alt="Image 2" />
       <div className={`${styles.overlay}`}></div>
@@ -38,7 +38,7 @@ function Carousel() {
           <p>Experience real estate exellence, every step of the way</p>
         </div>
       </div>
-      <div className={`${styles.slide} w-full  md:h-[900px] h-[350px]`}>
+      <div className={`${styles.slide} w-full lg:h-[800px]  md:h-[700px] h-[350px]`}>
       <div className={`${styles.imageContainer}`}>
         <img src="/images/image3.jpg" alt="Image 3" />
         <div className={`${styles.overlay}`}></div>
