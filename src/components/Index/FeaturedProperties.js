@@ -1,6 +1,6 @@
 import styles from '../../styles/properties.module.css';
 import { properties } from '../data/properties';
-import Grid from '@material-ui/core/Grid';
+import { Grid } from '@mui/material';
 import {MdLocationPin} from 'react-icons/md';
 import {LiaBedSolid} from 'react-icons/lia'
 
