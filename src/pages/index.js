@@ -9,7 +9,7 @@ export default function Home() {
   return (
 <div>
 <Carousel />
-<Nav />
+{/* <Nav /> */}
 <Explore />
 <FeaturedProperties />
 <GetInTouch />
