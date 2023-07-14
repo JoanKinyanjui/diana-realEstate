@@ -1,0 +1,39 @@
+.ExploreComponent{
+    background-color: white;
+    /* position: absolute;
+    top: 130%;
+    left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    font-family: System;
+    /* margin-top: -20%; */
+    
+}
+.CategoriesBoxes{
+    width: 25%;
+    background:  #ffe3ff;
+    height: 250px;
+}
+.IconStyle{
+    color: #FAA9FB;
+    font-size: 70px;
+}
+@media only screen and (max-width:768px) {
+    .ExploreComponent{
+        background-color: white;
+        /* position: absolute;
+        top: 170%;
+        left: 50%; */
+        /* transform: translate(-50%, -50%); */
+        font-family: System;
+        
+    }
+    .CategoriesBoxes{
+        width: 40%;
+        background:  #ffe3ff;
+        height: 150px;
+    }
+    .IconStyle{
+        color: #FAA9FB;
+        font-size: 50px;
+    }
+}

@@ -1,0 +1,51 @@
+.FeaturedComponent{
+    width: 100vw !important;
+    height: max-content;
+    font-family: System;
+}
+.SpecificHouseDiv{
+    width: 100%;
+    height: max-content;
+    position: relative;
+    /* background-color: navajowhite; */
+}
+.SpecificHouseDiv img{
+    width: 100%;
+    height: 250px;
+}
+.PriceOfAHouse{
+    position: absolute;
+    bottom: 5%;
+    right: 2%;
+    background-color: #ffd8ff;
+    padding: 0px 5px; border-radius: 2px;
+    font-size: medium;
+}
+.iconStyles{
+    color: gainsboro;
+    font-size: 15px;
+}
+.SaleDiv{
+    background-color: gainsboro;
+     
+}
+.EnquireButton{
+    background-color: #FAA9FB;
+    border-radius: 2px;
+    padding: 2px 10px;
+}
+@media only screen and (max-width:768px) {
+    .PriceOfAHouse{
+        position: absolute;
+        bottom: 2%;
+        right: 0;
+        background-color: #ffd8ff;
+        padding: 1px 3px; border-radius: 2px;
+        font-size: small;
+    }
+    .iconStyles{
+        color: #FAA9FB;
+        font-size: 12px;
+    }
+    
+}

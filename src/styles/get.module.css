@@ -1,0 +1,47 @@
+.GetInTouchDiv{
+    width: 50%;
+    font-family: System;
+    height: 780px;
+    background-image: url('/images/getInTouchBg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* position: relative; */
+}
+
+.FreeConsultationP{
+    color: #080708;
+font-family: Inter;
+font-size: 24px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+
+}
+.ImageOfCallGirl{
+    width: 307px;
+height: 480px;
+}
+.EnquireButton{
+    background-color: #FAA9FB;
+    border-radius: 5px;
+    padding: 10px 10px;
+}
+@media only screen and (max-width: 768px){
+    .GetInTouchDiv{
+        width: 90%;
+        height:580px !important;
+        background-image: url('/images/getInTouchBg.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .FreeConsultationP{
+    color: #080708;
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+}

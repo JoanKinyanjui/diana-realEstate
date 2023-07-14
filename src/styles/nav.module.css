@@ -1,0 +1,42 @@
+.NavComponent{
+    width: 100vw;
+    /* background :rgba(0, 0, 0, 0.1); */
+    background-color: white;
+    /* opacity: 0.1; */
+    height: max-content;
+    /* position: fixed; */
+    box-shadow: 2px 2px 5px gray;
+    top: 0;
+}
+
+    .IconStylesHAM{
+        color: #FAA9FB;
+    font-size: 30px;
+    }
+
+.EnquireButton{
+    background-color: #FAA9FB;
+    border-radius: 5px;
+    padding: 8px 15px;
+    color: white;
+    box-shadow: 3px 3px 5px rgb(8, 8, 8);
+}
+.ImmgrationDiv{
+    color: white;
+    font-weight: 400;
+    border-radius: 5px;
+    background: linear-gradient(178deg, #711873 0%, #FAA9FB 100%);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 5px 10px;
+    font-size: x-small;
+}
+
+@media only screen and (max-width:768px) {
+    .EnquireButton{
+        background-color: #FAA9FB;
+        border-radius: 5px;
+        padding: 5px 10px;
+        color: white;
+        box-shadow: 3px 3px 5px rgb(8, 8, 8);
+    }
+}
