@@ -17,6 +17,16 @@
     color: #FAA9FB;
     font-size: 70px;
 }
+@media only screen and (max-width:920px) {
+
+    .CategoriesBoxes{
+        width: 50%;
+        background:  #ffe3ff;
+        height: 200px;
+    }
+    
+}
+
 @media only screen and (max-width:768px) {
     .ExploreComponent{
         background-color: white;
