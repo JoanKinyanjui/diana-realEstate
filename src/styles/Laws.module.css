@@ -1,0 +1,19 @@
+.ButtonBookConsultation{
+    margin-top: 30px;
+    background-color: #FAA9FB;
+    padding: 5px 20px;
+    border-radius: 5px;
+    color: white;
+}
+.Laws{
+    font-family: System;
+}
+@media only screen and (max-width:768px) {
+    .ButtonBookConsultation{
+        margin-top: 20px;
+        background-color: #FAA9FB;
+        padding: 5px 10px;
+        border-radius: 5px;
+        color: white;
+        font-size: small;
+    }}

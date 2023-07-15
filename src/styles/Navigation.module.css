@@ -1,0 +1,13 @@
+.ImmigrationNavigation{
+    width: 100%;
+    background-color: rgb(249, 247, 247);
+    height: 60px;
+    display: flex;
+    font-family: System;
+}
+
+@media only screen and (max-width:768px) {
+    .ImmigrationNavigation{
+        font-size: small;
+        }
+}
