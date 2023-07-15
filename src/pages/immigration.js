@@ -8,7 +8,7 @@ import Navigation from '@/components/Immigration/navigation'
 import React, { useEffect, useState } from 'react';
 import styles from '../styles/Immigration.module.css';
 
-function immigration() {
+function Immigration() {
   const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
@@ -46,4 +46,4 @@ function immigration() {
   )
 }
 
-export default immigration
+export default Immigration;
