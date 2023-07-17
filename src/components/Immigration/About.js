@@ -5,7 +5,7 @@ import Link from 'next/link';
 function About() {
   return (
     <div className={`${styles.About} w-11/12 md:w-10/12 mx-auto  md:py-8 py-4`}>
-        <p className='text-[#FAA9FB] text-sm md:text-base mx-auto font-medium py-4 md:py-8 uppercase w-full text-center'  >About Our Immigration Consulting</p>
+        <p className='text-[#FAA9FB] text-sm md:text-base mx-auto font-medium py-4 md:py-8 uppercase w-full text-center'  >About DINGOA CONSULTANCY</p>
         <div className='grid md:flex w-full items-center'>
             <div className='md:grid w-full py-4 md:w-[40%] '>
              <img  src="https://images.pexels.com/photos/3810756/pexels-photo-3810756.jpeg?auto=compress&cs=tinysrgb&w=1600" className='w-[5/6] mx-auto h-[200px] md:h-[250px] hidden md:flex'/>

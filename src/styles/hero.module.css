@@ -30,6 +30,13 @@
     background-image: linear-gradient(to top, rgb(16, 16, 16),transparent,transparent);
 }
 @media only screen and (max-width:768px) {
+    .GradientHero{
+        width: 100vw;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        background-image: linear-gradient(to top, rgb(16, 16, 16),transparent);
+    }
     .HeroDiv{
         position: relative;
         height: 40vh;
