@@ -7,6 +7,7 @@ import Hero from '@/components/Immigration/hero'
 import Navigation from '@/components/Immigration/navigation'
 import React, { useEffect, useState } from 'react';
 import styles from '../styles/Immigration.module.css';
+import Whatsapp from '@/components/Whatsapp';
 
 function Immigration() {
   const [isSticky, setIsSticky] = useState(false);
@@ -42,6 +43,9 @@ function Immigration() {
         <Laws />
         <Book />
         </div>
+        <div className={`flex place-content-end px-4 fixed bottom-1 right-0`}>
+            <Whatsapp />
+           </div>
     </div>
   )
 }

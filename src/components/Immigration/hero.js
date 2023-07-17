@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../../styles/hero.module.css'
+import Link from 'next/link';
 
 function Hero() {
   return (
@@ -9,7 +10,7 @@ function Hero() {
             <div className={`${styles.GradientHero}`}></div>
             <div className={`${styles.HeroHtag}  w-full`}>
                 <p>Your Immigration Consulting Partner In Kenya</p>
-                <button className={`${styles.ButtonBookConsultation}`}>BOOK A CONSULTATION</button>
+                <Link href="/immigration#section4">  <button className={`${styles.ButtonBookConsultation}`}>BOOK A CONSULTATION</button> </Link>
             </div>
         </div>
     </div>
