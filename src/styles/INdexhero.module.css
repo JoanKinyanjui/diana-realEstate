@@ -1,0 +1,87 @@
+.DesktopHeroDiv{
+    width: 100vw;
+    height: 75vh;
+     background-image: url('/images/1337.jpg'); 
+    background-size: cover;
+    background-position: center; 
+}
+.Part1Hero{
+    line-height: 4rem;
+    font-size: 42px;
+    font-weight: 500;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.CaptiobnTagline2{
+    font-size: medium;
+    color: rgb(132, 131, 131);
+    letter-spacing: normal;
+    text-align: left;
+    line-height: 24px;
+    font-weight: 300;
+    font-family: Inter;
+}
+.MainServices{
+    background: radial-gradient(150.93% 100.14% at 60.00% 29.73%, #BA29D2 0%, rgba(21, 10, 22, 0.00) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+font-weight: bold;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.ButtonsDiv{
+    width: 150px;
+    font-size: smaller;
+    display: inline-flex;
+padding: 12px 15px;
+justify-content: center;
+align-items: center;
+gap: 12px;
+background-color: #1e0228;
+border-radius: 2px;
+color: rgb(242, 237, 237);
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+
+@media only screen and (max-width: 768px) {
+    .DesktopHeroDiv{
+        width: 100%;
+        height: max-content;
+        margin-bottom: 4rem;
+        background-image: url('https://img.freepik.com/free-vector/elegant-flowing-pink-business-wave-background_1035-23193.jpg?size=626&ext=jpg'); 
+        background-size: cover;
+        background-position: bottom; 
+    
+    }
+    .CaptiobnTagline2{
+        font-size: small;
+        color: rgb(132, 131, 131);
+        letter-spacing: normal;
+        text-align: center;
+        line-height: 15px;
+        font-weight: 300;
+        font-family: Inter;
+    }
+    .Part1Hero{
+        line-height: normal;
+        font-size: 25px;
+        font-weight: 500;
+        text-align: center;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    .MainServices{
+    font-weight: 600;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    line-height: 2rem
+    }
+    .ButtonsDiv{
+        width: 120px;
+        font-size: x-small;
+        display: inline-flex;
+    padding: 7px 10px;
+    align-items: center;
+    border-radius: 2px;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
+    }
+}

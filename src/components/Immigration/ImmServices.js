@@ -42,11 +42,11 @@ function ImmServices() {
 
       </div>
 
-      <div className='flex md:hidden'>
+      <div className='flex md:hidden '>
           {/* Mobile Layout */}
     <Tabs aria-label="Basic tabs" defaultValue={0} sx={{ borderRadius: '0px' }} id="section1"   >
-      <TabList variant='soft' size="sm" color='info' sx={{ display:"flex" , overflowX:"scroll", borderRadius:"0px"}}>
-        <Tab sx={{fontSize:"8px", textAlign:"center",}}   className='py-2' >FAMILY IMMIGRATION</Tab>
+      <TabList variant='soft' size="sm" color='info' sx={{ display:"flex" , overflowX:"scroll", borderRadius:"0px" ,width:"100vw"}}>
+        <Tab sx={{fontSize:"8px", textAlign:"center",}} >FAMILY IMMIGRATION</Tab>
         <Tab sx={{fontSize:"8px", textAlign:"center"}}>SKILLED IMMIGRATION</Tab>
         <Tab sx={{fontSize:"8px", textAlign:"center"}}>STUDENT VISA SERVICES</Tab>
         <Tab sx={{fontSize:"8px" , textAlign:"center"}}>TOURIST VISA SERVICES</Tab>
