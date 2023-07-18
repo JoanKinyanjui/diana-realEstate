@@ -11,7 +11,7 @@ function IndexHero() {
 <div className={`${styles.Part1Hero} w-1/2 items-center grid h-full  `}>
 <div  className='w-[80%] lg:w-[70%] mx-auto '>
 <p>Welcome to Dingoa Consultancy, Your Trusted Partner in Navigating </p>
-<p className={`${styles.MainServices} py-8 animate__animated animate__zoomIn animate__delay-2s animate__infinite animate__slower`}>IMMIGRATION & REALESTATE</p>
+<p className={`${styles.MainServices} py-8 animate__animated animate__zoomIn animate__delay-2s animate__infinite animate__slower `}>IMMIGRATION & REAL ESTATE</p>
 <div>
 <p className={`${styles.CaptiobnTagline2} w-[70%]`}>With years of experience and a team of dedicated proffessionals, we provide tailored solutions to help you seize new opportunities,achieve your goals and build a properous future</p>
 </div>
@@ -34,9 +34,9 @@ function IndexHero() {
 <div className={`${styles.Part1Hero} w-full items-center grid h-full  `}>
 <div  className='w-[90%] text-center md:w-[80%] lg:w-[70%] mx-auto'>
 <p>Dingoa Consultancy, Your Trusted Partner in Navigating </p>
-<p className={`${styles.MainServices} py-6 animate__animated animate__zoomIn animate__delay-2s animate__infinit animate__slower`}>IMMIGRATION
+<p className={`${styles.MainServices} py-6 animate__animated animate__zoomIn animate__delay-1s animate__infinit animate__slower`}>IMMIGRATION
  &
-  REALESTATE</p>
+  REAL ESTATE</p>
  
 
 <div className='w-full flex place-content-center py-4 '>
