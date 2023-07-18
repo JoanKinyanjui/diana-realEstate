@@ -17,7 +17,7 @@ export default function Home() {
       <IndexHero />
       <ReviewComponent testimonials={testimonials} />
       <div className={`flex place-content-end px-4 fixed bottom-2 right-2`}>
-            <Whatsapp />
+            <Whatsapp message="Hello, I would like to enquire more about your services" />
            </div>
     </div>
   );

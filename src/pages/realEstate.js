@@ -17,7 +17,7 @@ export default function RealEstate() {
       <div
         className={`${styles.RealEstateWhatsapp} flex place-content-end px-4 fixed bottom-1 right-0`}
       >
-        <Whatsapp />
+        <Whatsapp message="Hello , I would like to know more about your Realtor services" />
       </div>
     </div>
   );

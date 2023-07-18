@@ -44,7 +44,7 @@ function Immigration() {
         <Book />
         </div>
         <div className={`flex place-content-end px-4 fixed bottom-1 right-0`}>
-            <Whatsapp />
+            <Whatsapp message='Hello ,I would like to know more about Immigration services'/>
            </div>
     </div>
   )

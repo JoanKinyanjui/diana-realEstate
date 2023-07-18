@@ -9,11 +9,11 @@ function IndexHero() {
         {/* Desktop */}
         <div className={`${styles.DesktopHeroDiv}  w-10/12 mx-auto md:flex items-center hidden`}>
 <div className={`${styles.Part1Hero} w-1/2 items-center grid h-full  `}>
-<div  className='w-[80%] lg:w-[70%] mx-auto '>
+<div  className='w-[90%] lg:w-[70%] mx-auto '>
 <p>Welcome to Dingoa Consultancy, Your Trusted Partner in Navigating </p>
 <p className={`${styles.MainServices} py-8 animate__animated animate__zoomIn animate__delay-2s animate__infinite animate__slower `}>IMMIGRATION & REAL ESTATE</p>
 <div>
-<p className={`${styles.CaptiobnTagline2} w-[70%]`}>With years of experience and a team of dedicated proffessionals, we provide tailored solutions to help you seize new opportunities,achieve your goals and build a properous future</p>
+<p className={`${styles.CaptiobnTagline2} w-[80%] lg:w-[70%]`}>With years of experience and a team of dedicated proffessionals, we provide tailored solutions to help you seize new opportunities,achieve your goals and build a properous future</p>
 </div>
 <div className='flex justify-between text-base w-[70%] text-left py-8'>
     <Link href='/immigration'><button className={`${styles.ButtonsDiv}`} >Immigration Services</button></Link>
@@ -46,7 +46,7 @@ function IndexHero() {
 <div>
 <p className={`${styles.CaptiobnTagline2} w-[80%]  mx-auto text-center py-4`}>With years of experience and a team of dedicated proffessionals, we provide tailored solutions to help you seize new opportunities,achieve your goals and build a properous future</p>
 </div>
-<div className='flex justify-between text-base w-[80%] text-left pt-4 mx-auto'>
+<div className='flex justify-between text-base w-[90%] text-left pt-4 mx-auto'>
   <Link href='/immigration'><button className={`${styles.ButtonsDiv}`} >Immigration Services</button></Link>
   <Link href='/realEstate'>  <button className={`${styles.ButtonsDiv}`} >Realtor Services</button></Link>
 </div>
