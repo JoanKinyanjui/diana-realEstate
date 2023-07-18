@@ -34,7 +34,8 @@ function IndexHero() {
 <div className={`${styles.Part1Hero} w-full items-center grid h-full  `}>
 <div  className='w-[90%] text-center md:w-[80%] lg:w-[70%] mx-auto'>
 <p>Dingoa Consultancy, Your Trusted Partner in Navigating </p>
-<p className={`${styles.MainServices} py-6 animate__animated animate__zoomIn animate__delay-1s animate__infinit animate__slower`}>IMMIGRATION
+<p className={`${styles.MainServices} py-6 animate__animated animate__zoomIn animate__delay-1s animate__infinit animate__slower`}>
+  IMMIGRATION
  &
   REAL ESTATE</p>
  

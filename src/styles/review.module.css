@@ -7,8 +7,9 @@
     /* background-color: rgb(252, 247, 252); */
   filter: drop-shadow(0px 4px 4px rgba(238, 138, 240, 0.25));
   color: gray;
-  font-size: small;
+  font-size: 16px;
   width: 300px !important;
+  font-weight: 300;
   height: 13vh;
   border-radius: 100%;
 
