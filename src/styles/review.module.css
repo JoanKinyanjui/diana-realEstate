@@ -1,26 +1,47 @@
 .TestimonialDiv{
    width: 100vw;
    height: 15vh;
-   /* background-color: gainsboro; */
+   /* background-color: rgb(255, 192, 239); */
+}
+.TestimonialDivCircle {
+    /* background-color: rgb(252, 247, 252); */
+  filter: drop-shadow(0px 4px 4px rgba(238, 138, 240, 0.25));
+  color: gray;
+  font-size: small;
+  width: 300px !important;
+  height: 13vh;
+  border-radius: 100%;
+
+  /* Flexbox properties */
+  display: grid !important;
+  justify-content: center !important;
+  align-items: center !important;
+  }
+  
+
+.IconReactSlick{
+    color: #FAA9FB !important;
 }
 
-/* @media only screen and (max-width: 1200px) {
-    .TestimonialDiv{
-        background-color: gainsboro;
-        box-shadow: 3px 3px 5px gray;
-        height: 250px;
-        width: 400px !important;
-        border-radius: 30px;
-        font-size: small;
-    }
-}
+
 @media only screen and (max-width: 768px) {
-    .TestimonialDiv{
-        background-color: gainsboro;
-        box-shadow: 3px 3px 5px gray;
-        height: 300px;
-        width: 300px !important;
-        border-radius: 20px;
-        font-size: smaller;
-    }
-} */
+   .TestimonialDiv{
+   width: 100vw;
+   height: 10vh;
+   /* background-color: rgb(255, 192, 239); */
+}
+.TestimonialDivCircle {
+    /* background-color: rgb(252, 247, 252); */
+  filter: drop-shadow(0px 4px 4px rgba(238, 138, 240, 0.25));
+  color: gray;
+  font-size: small;
+  width: 300px !important;
+  height: 10vh;
+  border-radius: 100%;
+
+  /* Flexbox properties */
+  display: grid !important;
+  justify-content: center !important;
+  align-items: center !important;
+  }
+} 

@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 import { testimonials } from "../data/testimonials";
-import styles from '../../styles/review.module.css'
+import styles from '../../styles/review.module.css';
+import {BsFillAwardFill} from 'react-icons/bs'
 
 export default function ReviewComponent() {
 
@@ -35,20 +36,14 @@ export default function ReviewComponent() {
 
     return (
       <div className={`${styles.TestimonialDiv}`} >
-        {/* <Slider {...settings} className="w-screen flex place-content-center text-center">
+        <Slider {...settings} className="w-screen flex place-content-center  items text-center h-[13vh] items-center">
         {testimonials.map((item)=>(
-            <div className={`${styles.TestimonialDiv} text-center px-8 `}>
-                <div>
-                    <img src='/images/call.jpg' className="my-2 w-[60px] h-[60px] rounded-full mx-auto shadow-md shadow-black" />
-                </div>
-              <p className=" text-neutral-800 mt-1">Working with [Consultancy Name] was an exceptional experience. Their expertise in both immigration and real estate allowed us to seamlessly transition to a new country and find our dream home. Their attention to detail and personalized approach made all the difference</p>
-              <div className="flex items-center justify-between py-4">
-                    <p className="text-sm text-neutral-500 italic">John Doe</p>
-                   <img src='/images/stars.png' />
-                  </div>
+            <div className={`${styles.TestimonialDivCircle} mx-auto`}>
+                <BsFillAwardFill  className={`${styles.IconReactSlick} mx-auto text-xl`}/>
+              <p className="w-[100%] md:w-[80%] mx-auto text-gray-400 font-medium uppercase">{item.title}</p>
             </div>
         ))}
-        </Slider> */}
+        </Slider>
       </div>
     );
   }

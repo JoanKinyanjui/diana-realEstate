@@ -8,15 +8,17 @@ import IndexNav from "@/components/Index/IndexNav";
 import IndexHero from "@/components/Index/IndexHero";
 import ReviewComponent from "@/components/Index/ReviewComponent";
 import { testimonials } from "@/components/data/testimonials";
+import styles from '../styles/review.module.css'
 
 export default function Home() {
   return (
-    <div className="w-screen ">
+    <div className={`${styles.HomeDiv}`}>
       <IndexNav />
       <IndexHero />
-
       <ReviewComponent testimonials={testimonials} />
-      {/* <Whatsapp /> */}
+      <div className={`flex place-content-end px-4 fixed bottom-2 right-2`}>
+            <Whatsapp />
+           </div>
     </div>
   );
 }

@@ -16,16 +16,28 @@
     background:  radial-gradient(336.11% 336.11% at 46.28% -41.67%, #A0049A 0%, rgba(141, 77, 139, 0.00) 100%);
     mix-blend-mode: hard-light;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-color: white;
-padding: 15px 20px;
-font-size: small;
+    color: white;
+    padding: 15px 20px;
+    font-size: small;
 }
 
-
+.ButtonsDiv{
+    width: 150px;
+    font-size: smaller;
+    display: inline-flex;
+padding: 12px 15px;
+justify-content: center;
+align-items: center;
+gap: 12px;
+background-color: #1e0228;
+border-radius: 2px;
+color: rgb(242, 237, 237);
+box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
 
 @media only screen and (max-width: 768px) {
     .IndexNavMainDiv{
-        width: 95vw;
+        width: 90vw;
         min-height: 70px;
         cursor: pointer;
         color: rgb(94, 92, 92);
@@ -33,5 +45,14 @@ font-size: small;
         font-size: 1rem;
         letter-spacing: 0;
         line-height: 1.5rem;
+    }
+    .ButtonsDiv{
+        width: 120px;
+        font-size: x-small;
+        display: inline-flex;
+    padding: 7px 10px;
+    align-items: center;
+    border-radius: 2px;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.25);
     }
 }
