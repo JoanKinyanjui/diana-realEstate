@@ -38,7 +38,7 @@ export default function ReviewComponent() {
       <div className={`${styles.TestimonialDiv}`} >
         <Slider {...settings} className="w-screen flex place-content-center  items text-center h-[13vh] items-center">
         {testimonials.map((item)=>(
-            <div className={`${styles.TestimonialDivCircle} mx-auto`}>
+            <div className={`${styles.TestimonialDivCircle} mx-auto`} key={item.id}>
                 <BsFillAwardFill  className={`${styles.IconReactSlick} mx-auto text-xl`}/>
               <p className="w-[100%] md:w-[80%] mx-auto text-gray-400 font-medium uppercase">{item.title}</p>
             </div>
