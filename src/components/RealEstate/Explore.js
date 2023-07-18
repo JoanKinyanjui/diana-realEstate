@@ -6,7 +6,7 @@ import  {PiBankBold} from 'react-icons/pi'
 
 function Explore() {
   return (
-    <div className={`${styles.ExploreComponent} grid  w-10/12 md:w-[70%] lg:w-[60%]  mx-auto md:py-24 py-8`}>
+    <div className={`${styles.ExploreComponent} grid  w-full sm:w-10/12 md:w-[70%] lg:w-[60%]  mx-auto md:py-24 py-8`}>
         <p className='text-[#FAA9FB] text-sm md:text-base mx-auto font-medium py-4 md:py-8' >DINGOA CATEGORIES</p>
         <p className='text-black text-bold md:text-[40px] text-[22px] mx-auto py-4 md:pb-8'>Explore Our Categories & Places</p>
 
