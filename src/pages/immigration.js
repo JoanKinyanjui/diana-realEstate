@@ -8,6 +8,7 @@ import Navigation from '@/components/Immigration/navigation'
 import React, { useEffect, useState } from 'react';
 import styles from '../styles/Immigration.module.css';
 import Whatsapp from '@/components/Whatsapp';
+import IndexNav from '@/components/Index/IndexNav';
 
 function Immigration() {
   const [isSticky, setIsSticky] = useState(false);
@@ -32,7 +33,9 @@ function Immigration() {
 
   return (
     <div>
+      
      <div className={`${styles.stickyNav} ${isSticky ? styles.sticky : ''}`}>
+        <IndexNav />  
         <Navigation />
       </div>
         <div className={`${styles.TheRest}`}>

@@ -5,12 +5,13 @@ import FeaturedProperties from "@/components/RealEstate/FeaturedProperties";
 import Nav from "@/components/Nav";
 import Whatsapp from "@/components/Whatsapp";
 import styles from "../styles/realEstate.module.css";
+import IndexNav from "@/components/Index/IndexNav";
 
 export default function RealEstate() {
   return (
     <div className={`${styles.RealEstateDiv} flex flex-col min-h-screen`}>
+      <IndexNav />
       <Carousel />
-      {/* <Nav /> */}
       <Explore />
       <FeaturedProperties />
       <GetInTouch />
