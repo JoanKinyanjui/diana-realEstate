@@ -3,6 +3,7 @@ import { properties } from '../data/properties';
 import { Grid } from '@mui/material';
 import {MdLocationPin} from 'react-icons/md';
 import {LiaBedSolid} from 'react-icons/lia'
+import Link from 'next/link';
 
 function FeaturedProperties() {
   return (
@@ -31,7 +32,7 @@ function FeaturedProperties() {
                  <p><LiaBedSolid /> </p> <p>2bedrooms</p>
              </div>
              <div className='w-full flex place-content-center px-2  py-2'>
-                 <button className={`${styles.EnquireButton}`}>ENQUIRE</button>
+                <Link href="/immigration#section4" > <button className={`${styles.EnquireButton}`}>ENQUIRE</button></Link>
              </div>
  
          </div>
