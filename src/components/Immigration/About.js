@@ -20,7 +20,7 @@ function About() {
               
               At Dingoa Consultancy we individually assess each and every application and inquiry and try to solve even critical immigration related issues without any problem.
               Any individual risk a rejection in some or other field if he or she applies without proper knowledge of submitting and lodging visa applications.
-              That's when our  immigration experts come in to provide the best possible advice to the aspiring applicants who would like to come visit Kenya for tourism, study ,  engage in employment,  business or any prescribed profession or settle in Kenya.
+              That&apos;s when our  immigration experts come in to provide the best possible advice to the aspiring applicants who would like to come visit Kenya for tourism, study ,  engage in employment,  business or any prescribed profession or settle in Kenya.
               We strive to respond to your questions within 24 hours , during regular weekdays.
               <br />
             <p className='text-left px-4 text-neutral-500'>
@@ -30,13 +30,13 @@ function About() {
               ✓  After submitting the application form, it can take between a few business days to up to 8 days in rare cases.
               <br />
 
-              ✓ Once approved , the Kenya evisa is immediately sent to the Applicant's email inbox.
+              ✓ Once approved , the Kenya evisa is immediately sent to the Applicant&apos;s email inbox.
               <br />
 
               ✓ Eligible travellers for the Kenya evisa are advised to consider their desired arrival  date in Kenya when applying.
               <br />
 
-              ✓ It's recommended to apply at least 7 business days before their intended entry date.
+              ✓ It&apos;s recommended to apply at least 7 business days before their intended entry date.
               <br />
             </p>
 
