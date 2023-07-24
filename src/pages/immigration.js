@@ -9,6 +9,7 @@ import React, { useEffect, useState } from 'react';
 import styles from '../styles/Immigration.module.css';
 import Whatsapp from '@/components/Whatsapp';
 import IndexNav from '@/components/Index/IndexNav';
+import StepperWithInputFields from '@/components/InputStepper';
 
 function Immigration() {
   const [isSticky, setIsSticky] = useState(false);
@@ -45,10 +46,11 @@ function Immigration() {
         <Guidance />
         <Laws />
         <Book />
+        <StepperWithInputFields />
         </div>
         <div className={`flex place-content-end px-4 fixed bottom-1 right-0`}>
             <Whatsapp message='Hello ,I would like to know more about Immigration services'/>
-           </div>
+        </div>
     </div>
   )
 }

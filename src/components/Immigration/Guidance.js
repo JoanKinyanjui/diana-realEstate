@@ -16,7 +16,7 @@ Kenya Visa Eligibility
 Persons travelling to the Republic of Kenya are divided into 3 categories:
 <br />
 <br />
-<div className='text-left'>
+<div className='text-left md:pl-8'>
 <strong>1.Category.</strong>
 Persons from nationalities who do not require visas to Kenya.
 <br />
