@@ -8,9 +8,33 @@ function Guidance() {
         <p className='text-black text-bold md:text-[40px] text-[22px] mx-auto py-2 md:pb-8 text-center'>Get Guidance On Visa Processing </p>
         <div className='w-full text-center'>
           <img  className=' w-[90%] md:w-[60%] py-2 mx-auto' src='https://images.pexels.com/photos/3894378/pexels-photo-3894378.jpeg?auto=compress&cs=tinysrgb&w=1600' />
-          <p className='w-full md:w-[80%] mx-auto text-center  py-4  text-[15px] md:text-[18px]'>Our forte lies in providing proper guidance and step-by-step method following so that the client gets the complete knowledge on visa processing. As Immigration experts, we aim to provide specialization in migration to foreign countries, advisory services and other immigration-related services in order to help the global community. We have made our niche market in the business by providing expert advices and immigration assistance for those aspiring to visit,settle, work or study in countires abroad
-          . <br />
-          We are not just working for money but also to gain respect. At Hisbah Consultants, we believe in providing high quality client-servicing in those areas that are not aided by government or any governmental bodies. We believe in providing hi-quality client satisfaction and excel in every arena of immigration related services. Our aim is to serve the applicants and executing their dream by successfully guiding them through the visa process. By reducing the stress we are providing best for your delight immigration experience.</p>
+          <p className='w-full md:w-[80%] mx-auto text-center  py-4  text-[15px] md:text-[18px]'>
+<br />
+At Dingoa Consultancy,  we believe that two approaches are equally important; the professional , efficient provision of immigration services and advice, and the personal care and attention we give to each one of our clients.
+Every person travelling to Kenya is required to have a passport valid for at least 6 months.
+Kenya Visa Eligibility
+Persons travelling to the Republic of Kenya are divided into 3 categories:
+<br />
+<br />
+<div className='text-left'>
+<strong>1.Category.</strong>
+Persons from nationalities who do not require visas to Kenya.
+<br />
+<strong>2.Category.</strong>
+Nationals and persons who require visas to enter Kenya.
+<br />
+<strong>3.Category.</strong>
+Countries and persons who require referred visa.
+<br />
+</div>
+<br />Fill out the online application form with your details as stated in your passport and select your preferred processing time and fees.
+<br />Review all the information ,make sure it is correct and pick a form of payment.We accept Mpesa mobile money, Master cards, Visa card , credit and debit card.
+<br />Upload all the required documents and apply.
+<br />Take note that all the information provided must precisely match what is printed on the passport.
+<br />Kindly review your information before submitting because minor mistakes are the most common reason for Kenya's online visa rejection.
+<br />
+If you need assistance guidance in your application process, reach out to our excellent customer support team.
+          </p>
           <Link href="/immigration#section4">  <button className={`${styles.ButtonBookConsultation}`}>BOOK CONSULTATION</button></Link>
         </div>
     </div>

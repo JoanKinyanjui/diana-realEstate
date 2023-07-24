@@ -19,7 +19,33 @@ function Laws() {
   </div>
 
    <div className='text-center md:text-left w-full md:w-1/2'>
-    <p className='text-[15px] md:text-[18px] md:px-2 font-serif text-ce md:w-[80%]'>Immigration law is a complex web of different Acts, Rules, Regulations and Policy that makes immigrating a daunting and stressful task. Added to the complexity is the ever-changing nature of Immigration Law. Hisbah Consultants Immigration experts is constantly monitoring all the changes to immigration laws in order to maintain the highest standard of accurate and credible advice with a goal to remove hurldles for both immigrants and non immigrants. No matter where you are in the world, we personally attend to your case.At Hisbah Consultants, we believe that two approaches are equally important: the professional, efficient provision of immigration services and advice and the personal care and attention we give to each one of our clients. Hisbah Consultants is considered to be Highly Trusted Migration Consultant in East Africa and beyond due to honesty in dealing and inimitable competency in work. We do not take up any case unless we identify the possibilities of success rate of the case before we formally accept the application. Hisbah Consultants is an independent immigration consultancy providing a wide range of global immigration and visa handling services and serving in the consultancy industry since 2010 with has hundreds of satisfied customers by now. We are specialized in Australian immigration, Canadian immigration, United Kingdom immigration,USA,UAE and the Middle East.We also have expertise in assisting with student university admission and student visas</p>
+    <p className='text-[15px] md:text-[18px] md:px-2 font-serif text-ce md:w-[80%]'>
+<br/>Immigration law is a complex Web of different Acts , Rules , Regulations and policy that makes Immigration a daunting and stressful task. Added to the complexity is the ever-changing nature of immigration.
+<br/>At Dingoa Consultancy we as immigration experts are constantly monitoring all the changes to immigration laws in order to maintain the highest standard of accurate and credible advice with a goal to remove hurdles for both immigrants and non immigrants.
+<br/>Kenya has a sound legal framework that governs national immigration policy.
+<br/>There is Kenya citizenship and immigration regulations 2012 which repealed the previous Kenyan Citizenship Act and immigration Act 2011 of the law of Kenya . This Act  regulates the overall immigration sytem and provides different types of visas and permits to enter the country.
+<br/>Then there is Kenya citizens and Foreign Nationals Management Service, regulations 2016 which repealed the previous act - the Kenya Citizens and Foreign National Management Service Act 2011.
+<br/>Kenya Immigration is governed by the directorate of immigration services,  which reports to the ministry of interior and national government coordination. And it is the same directorate that enforces the immigration law.
+<br/>The immigration services  has various responsibilities; 
+<div className='text-left md:pl-8'>
+-Control visa regulations,  entry and exit permits at the  airport and borders.
+<br />
+-Recognize and deport prohibited immigrants.
+<br />
+-Examine and fine charges against violators of immigration laws and rules.
+<br />
+-Consider Kenyan nationality to suitable immigrants.
+<br />
+</div>
+
+<br/>The department delivers details about every visa and permit, legal advice , and access for outside citizens seeking entry into the country.
+
+
+
+
+
+
+     </p>
    </div>
     </div>
   <div className='flex text-center  place-content-center py-4'>
