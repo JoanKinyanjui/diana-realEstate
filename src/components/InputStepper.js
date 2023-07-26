@@ -86,6 +86,11 @@ const StepperWithInputFields = () => {
     }));
   };
 
+
+  const handleSubmit = () => {
+    console.log('Submitting input values');
+  };
+
   return (
 <div className='md:w-3/4 w-10/12 grid   mx-auto'>
 <ThemeProvider theme={customTheme}>
@@ -427,22 +432,26 @@ const StepperWithInputFields = () => {
                      </Typography>
 
                     <div>
-                      {activeStep === steps.length ? (
-                        <div>
-                          <Typography variant="h6">All steps completed</Typography>
-                        </div>
-                      ) : (
-                        <div>
-                          <div>
-                            <Button disabled={activeStep === 0} onClick={handleBack}>
-                              Back
-                            </Button>
-                            <Button variant="contained" color="primary" onClick={handleNext}>
-                              {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
-                            </Button>
-                          </div>
-                        </div>
-                      )}
+                 {activeStep === steps.length ? (
+          <div>
+            <Typography variant="h6">All steps completed</Typography>
+            <Button variant="contained" color="primary" onClick={handleSubmit}>
+              Finish
+            </Button>
+          </div>
+        ) : (
+          <div>
+            <div>
+              <Button disabled={activeStep === 0} onClick={handleBack}>
+                Back
+              </Button>
+              <Button variant="contained" color="primary" onClick={handleNext}>
+                {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
+              </Button>
+            </div>
+          </div>
+        )}
+{/* .THe last element */}
                     </div>
                   </div>
                 )}

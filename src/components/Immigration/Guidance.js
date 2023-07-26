@@ -37,7 +37,7 @@ If you need assistance guidance in your application process, reach out to our ex
           </p>
           <Link href="/immigration#section4">  <button className={`${styles.ButtonBookConsultation}`}>BOOK CONSULTATION</button></Link>
         </div>
-    </div>
+    </div> 
   )
 }
 
