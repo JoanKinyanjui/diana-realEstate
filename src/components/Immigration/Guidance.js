@@ -31,7 +31,7 @@ Countries and persons who require referred visa.
 <br />Review all the information ,make sure it is correct and pick a form of payment.We accept Mpesa mobile money, Master cards, Visa card , credit and debit card.
 <br />Upload all the required documents and apply.
 <br />Take note that all the information provided must precisely match what is printed on the passport.
-<br />Kindly review your information before submitting because minor mistakes are the most common reason for Kenya's online visa rejection.
+<br />Kindly review your information before submitting because minor mistakes are the most common reason for Kenya&apos;s online visa rejection.
 <br />
 If you need assistance guidance in your application process, reach out to our excellent customer support team.
           </p>
