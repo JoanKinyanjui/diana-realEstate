@@ -30,7 +30,7 @@ function ImmServices() {
                <img className='w-auto h-[400px]' src={item.image}/>
                <div className=''>
                <p  style={{ whiteSpace: "pre-line" }}  className={`${styles.nowAgain} text-left py-4 text-[17px]`}>{item.content} </p>
-               <Link href="/immigration#section4"> <button  className={`${styles.ButtonBookConsultation} `} >APPLY NOW</button></Link>
+               <Link href="/immigration#section5"> <button  className={`${styles.ButtonBookConsultation} `} >APPLY NOW</button></Link>
            </div>
                </div>
           </div>
@@ -59,7 +59,7 @@ function ImmServices() {
                <img src={item.image}/>
                <div className='text-center'>
                <p className={`${styles.nowAgain}  py-4 text-[15px]`}>{item.content}</p>
-               <Link href="/immigration#section4">   <button  className={`${styles.ButtonBookConsultation}`} >BOOK CONSULTATION</button></Link>
+               <Link href="/immigration#section5">   <button  className={`${styles.ButtonBookConsultation}`} >APPLY NOW</button></Link>
            </div>
                </div>
           </div>

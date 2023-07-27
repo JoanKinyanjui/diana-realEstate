@@ -84,7 +84,7 @@ const StepperWithInputFields = () => {
   };
 
   return (
-<div className='md:w-3/4 w-10/12 grid  mx-auto border'>
+<div className='md:w-3/4 w-10/12 grid  mx-auto py-8' id="section5">
 <div className='grid md:gap-[25px] gap-[10px] font-[System]'>
           <p className='text-[#FAA9FB] text-sm md:text-base mx-auto font-medium py-4 md:py-8'>APPLY FOR VISA</p>
           <p className='text-black text-bold md:text-[40px] text-[22px] mx-auto py-4 md:pb-8'>FILL THE FORM BELOW</p>
