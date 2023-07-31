@@ -109,10 +109,11 @@ const StepperWithInputFields = () => {
   const handleSubmit = () => {
     console.log('Submitting input values');
     if (!declarationChecked || !termsChecked) {
-      setTickMessage("Please check both checkboxes before submitting.");
+      setTickMessage("Please check both checkboxes before submitting...");
       return;
     }
     console.log('Submitting input values');
+    setTickMessage('')
   };
  
 
@@ -257,7 +258,7 @@ const StepperWithInputFields = () => {
                          name="passportBioDataImage"
                          onChange={handleFileInputChange}
                          required
-                         className="my-2 mx-2 md:mx-4"
+                         className={`${styles.fileInput} my-2 mx-2 md:mx-4 grid md:flex w-full`}
                          multiple // Allows selecting multiple files
                        />
                        
@@ -319,7 +320,7 @@ const StepperWithInputFields = () => {
                          name="passportPhoto"
                          onChange={handleFileInputChange}
                          required
-                         className="my-2 mx-2 md:mx-4"
+                         className={`${styles.fileInput} my-2 mx-2 md:mx-4  grid md:flex w-full` }
                          multiple // Allows selecting multiple files
                        />
                        </div>
@@ -543,7 +544,7 @@ const StepperWithInputFields = () => {
                          type="file"
                          name="passportPhoto"
                          onChange={handleFileInputChange}
-                         className="my-2 mx-2 md:mx-4"
+                         className={`${styles.fileInput} my-2 mx-2 md:mx-4 grid md:flex w-full`}
                          multiple // Allows selecting multiple files
                        />
                        </div>
@@ -587,7 +588,7 @@ const StepperWithInputFields = () => {
                          type="file"
                          name="letterOfAdmission"
                          onChange={handleFileInputChange}
-                         className="my-2 mx-2 md:mx-4"
+                         className={`${styles.fileInput} my-2 mx-2 md:mx-4 grid md:flex w-full`}
                          multiple // Allows selecting multiple files
                        />
                        </div>
@@ -625,7 +626,7 @@ const StepperWithInputFields = () => {
           </Stepper>
         </div>
         <div className='w-full place-content-center grid py-12'>
-       <div className='grid'>
+       <div className='grid text-sm  md:text-base'>
        <FormControlLabel
             control={
               <Checkbox
@@ -647,10 +648,12 @@ const StepperWithInputFields = () => {
               />
             }
             label="I have read and understood the terms and conditions and privacy policy."
+            className='py-2'
           />
        </div>
-       <div className='italic text-neutral-500 mx-auto'>
-      (  {tickMessage})
+       <div className='italic text-neutral-500 mx-auto text-sm py-2 md:text-md'>
+        
+       {tickMessage}
        </div>
       <button className={`${styles.ButtonsDiv} mx-auto mt-8`} onClick={handleSubmit} >Submit</button>
     </div>
