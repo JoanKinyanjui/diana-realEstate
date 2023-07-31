@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import styles from '../styles/INdexhero.module.css'
-import { Stepper, Step, StepLabel, Button, Typography, TextField, Container, createTheme, ThemeProvider,
-} from '@mui/material';
+import { Stepper, Step, StepLabel, Button, Typography, TextField, Container, createTheme, ThemeProvider,Select, MenuItem, InputLabel} from '@mui/material';
+import ReactPhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css'; // Import the CSS for styling (optional)
 
-const steps = ['Contact', 'Traveller Information', 'Passport Details', "Travel Details", 'Contact Person In Kenya Details','Organization Details (optional)','Company/Firm Details','Educational Details'];
+const steps = ['Contact', 'Traveller Information', 'Passport Details', "Travel Details", 'Contact Person In Kenya Details(optional)','Organization Details (optional)','Company/Firm Details (optional)','Educational Details (optional)'];
 
 // Create a custom theme with the primary color set to pink
 const customTheme = createTheme({
@@ -22,6 +23,7 @@ const StepperWithInputFields = () => {
     surname:'',
     middleName:'',
     givenNames:'',
+    dateOFBirth:'',
     nationality:'',
     countryOfResidence:'',
     physicalAddress:'',
@@ -29,15 +31,17 @@ const StepperWithInputFields = () => {
     phoneNoOfNextKin:'',
     passportPhoto:'',
     //PassportDetails
+    passportNumber:"",
     countryOfPassport:'',
     passportNumber:'',
     PassportDateOfIssue:'',
     passportExpiryDate:'',
-    passportBioDataPage:'',
+    passportBioDataImage:'',
     // Travel Details 
     purposeOfVisit:'',
-    intendedDataeOfEntry:'',
-    intendedDataeOfExit:'',
+    intendedDateOfEntry:'',
+    intendedDateOfExit:'',
+    portOfEntry:"",
     beenToKenyaBefore:'',
     deniedEntryToKenyaBefore:'',
     convicted:'',
@@ -51,13 +55,16 @@ const StepperWithInputFields = () => {
     orgName:'',
     orgAddress:'',
     orgPerson:'',
+    orgLetterYesOrNo:"",
     orgLetterOfInvitation:'',
     // Company Details
     companyName:'',
+    companyDocYesOrNo:"",
     companyDoc:'',
     // Education Details
     nameOfSchool:'',
     schoolAddress:"",
+    letterOfAdmissionYesOrNo:"",
     letterOfAdmission:'',
 
   });
@@ -76,6 +83,13 @@ const StepperWithInputFields = () => {
       ...prevValues,
       [name]: value,
     }));
+  };
+
+  const [selectedFiles, setSelectedFiles] = useState([]);
+
+  const handleFileInputChange = (event) => {
+    const { files } = event.target;
+    setSelectedFiles([...files]);
   };
 
 
@@ -119,15 +133,20 @@ const StepperWithInputFields = () => {
                           style={{margin:"10px 10px"}}
                          className='my-2 mx-2 md:mx-4'
                           />
-                           <TextField 
-                          name="phoneNo"
-                          label="Cell/MobileNumber"
-                        value={inputValues.email}
-                        onChange={handleInputChange}
-                        required 
-                         style={{margin:"10px 10px"}}
-                        className='my-2 mx-2 md:mx-4'
+                           <div style={{ margin: '10px 10px' }}>
+                           <InputLabel htmlFor='contactPhoneNo'>phone number/ cell/mobile</InputLabel>
+                          <ReactPhoneInput
+                            defaultCountry="us" // Set the default country (optional)
+                            value={inputValues.phoneNo}
+                            onChange={handleInputChange}
+                            required
+                            inputExtraProps={{
+                              name: 'phoneNo',
+                              label: 'phone Number/cell number',
+                              variant: 'outlined',
+                            }}
                           />
+                        </div>
                          
                         </div>
                       )}
@@ -156,6 +175,15 @@ const StepperWithInputFields = () => {
                          name="givenNames"
                          label="Given Names"
                        value={inputValues.givenNames}
+                       onChange={handleInputChange}
+                       required 
+                        style={{margin:"10px 10px"}}
+                       className='my-2 mx-2 md:mx-4'
+                          />
+                           <TextField 
+                         name="dateOfBirth"
+                         label="Date Of Birth"
+                       value={inputValues.dateOFBirth}
                        onChange={handleInputChange}
                        required 
                         style={{margin:"10px 10px"}}
@@ -197,29 +225,56 @@ const StepperWithInputFields = () => {
                         style={{margin:"10px 10px"}}
                        className='my-2 mx-2 md:mx-4' 
                        />
-                            <TextField 
-                         name="phoneNo"
-                         label="Cell/Mobile of Next Of Kin"
-                       value={inputValues.phoneNoOfNextKin}
-                       onChange={handleInputChange}
-                       required 
-                        style={{margin:"10px 10px"}}
-                       className='my-2 mx-2 md:mx-4'
+                         <div style={{ margin: '10px 10px' }}>
+                         <InputLabel htmlFor='contactPhoneNo'>phone number of next of kin</InputLabel>
+                          <ReactPhoneInput
+                            defaultCountry="us" // Set the default country (optional)
+                            value={inputValues.phoneNoOfNextKin}
+                            onChange={handleInputChange}
+                            required
+                            inputExtraProps={{
+                              name: 'phoneNoOfNextKin',
+                              label: 'phone number of next of kin',
+                              variant: 'outlined',
+                            }}
                           />
-                            <TextField 
-                         name="phoneNo"
-                         label="Recent  Passport Photo"
-                       value={inputValues.email}
-                       onChange={handleInputChange}
-                       required 
-                        style={{margin:"10px 10px"}}
-                       className='my-2 mx-2 md:mx-4'
-                          />
-                        </>
+                        </div>
+                     
+                        <div style={{ margin: '10px 10px' }}>
+                       <InputLabel>Passport Photo</InputLabel>
+                       <input
+                         type="file"
+                         name="passportBioDataImage"
+                         onChange={handleFileInputChange}
+                         required
+                         className="my-2 mx-2 md:mx-4"
+                         multiple // Allows selecting multiple files
+                       />
+                       
+                       </div>
+                                </>
                       )}
                       {activeStep === 2 && (
                         // Step 2 - Passport Details
                         <>
+                         <TextField
+                            name="passportNumber"
+                            label="Passport NUmber"
+                            value={inputValues.passportNumber}
+                            onChange={handleInputChange}
+                            required 
+                             style={{margin:"10px 10px"}}
+                            className='my-2 mx-2 md:mx-4'
+                          />
+                        <TextField
+                            name="countryOfPassport"
+                            label="Country Of Passport"
+                            value={inputValues.countryOfPassport}
+                            onChange={handleInputChange}
+                            required 
+                             style={{margin:"10px 10px"}}
+                            className='my-2 mx-2 md:mx-4'
+                          />
                           <TextField
                             name="countryOfPassport"
                             label="Country Of Passport"
@@ -247,15 +302,17 @@ const StepperWithInputFields = () => {
                         style={{margin:"10px 10px"}}
                        className='my-2 mx-2 md:mx-4'
                           />
-                            <TextField 
-                         name="phoneNo"
-                         label="Biodsata Page IMAGE"
-                       value={inputValues.email}
-                       onChange={handleInputChange}
-                       required 
-                        style={{margin:"10px 10px"}}
-                       className='my-2 mx-2 md:mx-4'
-                          />
+                          <div style={{ margin: '10px 10px' }}>
+                       <InputLabel>Biodata Page IMAGE</InputLabel>
+                       <input
+                         type="file"
+                         name="passportPhoto"
+                         onChange={handleFileInputChange}
+                         required
+                         className="my-2 mx-2 md:mx-4"
+                         multiple // Allows selecting multiple files
+                       />
+                       </div>
                         </>
                       )}
                             {activeStep === 3 && (
@@ -273,8 +330,8 @@ const StepperWithInputFields = () => {
                           />
                           <TextField
                             name="intendedDateOfEntry"
-                            label="Intended Datae Of Entry"
-                            value={inputValues.intendedDataeOfEntry}
+                            label="Intended Date Of Entry"
+                            value={inputValues.intendedDateOfEntry}
                             onChange={handleInputChange}
                             className='my-2 mx-2 md:mx-4'
                             required 
@@ -283,39 +340,63 @@ const StepperWithInputFields = () => {
                             <TextField 
                            name="intendedDatteOfExit"
                            label="Intended Date Of Exit"
-                           value={inputValues.intendedDataeOfExit}
+                           value={inputValues.intendedDateOfExit}
                            onChange={handleInputChange}
                            className='my-2 mx-2 md:mx-4'
                            required 
                             style={{margin:"10px 10px"}}
                           />
                             <TextField 
-                         name="beenToKenyaBefore"
-                         label="Have You Been To Kenya Before"
-                         value={inputValues.beenToKenyaBefore}
-                         onChange={handleInputChange}
-                         className='my-2 mx-2 md:mx-4'
-                         required 
-                          style={{margin:"10px 10px"}}
+                           name="portOfEntry"
+                           label="Port Of Entry"
+                           value={inputValues.portOfEntry}
+                           onChange={handleInputChange}
+                           className='my-2 mx-2 md:mx-4'
+                           required 
+                            style={{margin:"10px 10px"}}
                           />
-                            <TextField 
-                         name="deniedEntryToKenya"
-                         label="Have You Been Denied Entryu To Kenya Before ?"
-                         value={inputValues.deniedEntryToKenyaBefore}
-                         onChange={handleInputChange}
-                         className='my-2 mx-2 md:mx-4'
-                         required 
-                          style={{margin:"10px 10px"}}
-                          />
-                            <TextField 
-                         name="convicted"
-                         label="Have You Been Convicted of any crime before"
-                         value={inputValues.convicted}
-                         onChange={handleInputChange}
-                         className='my-2 mx-2 md:mx-4'
-                         required 
-                          style={{margin:"10px 10px"}}
-                          />
+                          <div style={{ margin: '10px 10px' }}>
+                        <InputLabel>Have You Been to Kenya before?</InputLabel>
+                        <Select
+                          name="beenToKenyaBefore"
+                          value={inputValues.beenToKenyaBefore}
+                          onChange={handleInputChange}
+                          required
+                          className="my-2 mx-2 md:mx-4"
+                          fullWidth
+                        >
+                          <MenuItem value="no">No</MenuItem>
+                          <MenuItem value="yes">Yes</MenuItem>
+                        </Select>
+                         </div>
+                         <div style={{ margin: '10px 10px' }}>
+                        <InputLabel>Have you been denied entry to kenya before ?</InputLabel>
+                        <Select
+                          name="deniedEntryToKenyaBefore"
+                          value={inputValues.deniedEntryToKenyaBefore}
+                          onChange={handleInputChange}
+                          required
+                          className="my-2 mx-2 md:mx-4"
+                          fullWidth
+                        >
+                          <MenuItem value="no">No</MenuItem>
+                          <MenuItem value="yes">Yes</MenuItem>
+                        </Select>
+                         </div>
+                         <div style={{ margin: '10px 10px' }}>
+                        <InputLabel>Have you been convicted of any crime before ?</InputLabel>
+                        <Select
+                          name="convicted"
+                          value={inputValues.convicted}
+                          onChange={handleInputChange}
+                          required
+                          className="my-2 mx-2 md:mx-4"
+                          fullWidth
+                        >
+                          <MenuItem value="no">No</MenuItem>
+                          <MenuItem value="yes">Yes</MenuItem>
+                        </Select>
+                         </div>
                         </>
                       )}
                        {activeStep === 4 && (
@@ -323,15 +404,14 @@ const StepperWithInputFields = () => {
                         <>
                             <TextField 
                          name="contactName"
-                         label="Contact NAME"
+                         label="Contact name"
                          value={inputValues.contactName}
                          onChange={handleInputChange}
-                         className='my-2 mx-2 md:mx-4'
-                         required 
+                         className='my-2 mx-2 md:mx-4' 
                           style={{margin:"10px 10px"}}
                           />
                             <TextField 
-                         name=""
+                         name="alienCard"
                          label="IdentityCard \ AlienCard \ Passport Copy IMAGE"
                          value={inputValues.alienCard}
                          onChange={handleInputChange}
@@ -339,25 +419,46 @@ const StepperWithInputFields = () => {
                          required 
                           style={{margin:"10px 10px"}}
                           />
-                            <TextField 
-                         name="phoneNumberOfContactPerson"
-                         label="Phone Number Of Contact Person"
-                         value={inputValues.contactPhoneNo}
-                         onChange={handleInputChange}
-                         className='my-2 mx-2 md:mx-4'
-                         required 
-                          style={{margin:"10px 10px"}}
+                           <div style={{ margin: '10px 10px' }}>
+                            <InputLabel htmlFor='contactPhoneNo'>phone number of contact</InputLabel>
+                          <ReactPhoneInput
+                            defaultCountry="us" // Set the default country (optional)
+                            value={inputValues.contactPhoneNo}
+                            onChange={handleInputChange}
+                            inputExtraProps={{
+                              name: 'contactPhoneNo',
+                              label: 'Contact phone Number',
+                              variant: 'outlined',
+                            }}
                           />
-                              <TextField 
-                         name="letterOfInvitationFromContact"
-                         label="Invitation Letter from Contact Person"
-                         value={inputValues.invitationLetterFromContact}
-                         onChange={handleInputChange}
-                         className='my-2 mx-2 md:mx-4'
-                         required 
-                          style={{margin:"10px 10px"}}
-                          />
-                          
+                        </div>
+                               <div style={{ margin: '10px 10px' }}>
+                        <InputLabel>Do you have invitation letter from contact ?</InputLabel>
+                        <Select
+                          name="invitationFromContact"
+                          value={inputValues.invitationLetterFromContact}
+                          onChange={handleInputChange}
+                          className="my-2 mx-2 md:mx-4"
+                          fullWidth
+                        >
+                          <MenuItem value="no">No</MenuItem>
+                          <MenuItem value="yes">Yes</MenuItem>
+                        </Select>
+                         </div>
+                        <div style={{ margin: '10px 10px' }}>
+                        <InputLabel>Do you have hotel booking</InputLabel>
+                        <Select
+                          name="hotelBooking"
+                          value={inputValues.hotelBooking}
+                          onChange={handleInputChange}
+                          className="my-2 mx-2 md:mx-4"
+                          fullWidth
+                        >
+                          <MenuItem value="no">No</MenuItem>
+                          <MenuItem value="yes">Yes</MenuItem>
+                        </Select>
+                         </div>
+
                         </>
                       )}
                        {activeStep === 5 && (
@@ -368,9 +469,7 @@ const StepperWithInputFields = () => {
                             label="Name Of Organisation"
                             value={inputValues.orgName}
                             onChange={handleInputChange}
-                           
                             className='my-2 mx-2 md:mx-4'
-                            required 
                              style={{margin:"10px 10px"}}
                           />
                           <TextField
@@ -379,7 +478,6 @@ const StepperWithInputFields = () => {
                             value={inputValues.orgAddress}
                             onChange={handleInputChange}
                             className='my-2 mx-2 md:mx-4'
-                            required 
                              style={{margin:"10px 10px"}}
                           />
                             <TextField 
@@ -388,18 +486,21 @@ const StepperWithInputFields = () => {
                              value={inputValues.orgPerson}
                              onChange={handleInputChange}
                              className='my-2 mx-2 md:mx-4'
-                             required 
                               style={{margin:"10px 10px"}}
                           />
-                               <TextField 
-                         name="phoneNumberOfContactPerson"
-                         label="Letter of Invitation"
-                         value={inputValues.orgLetterOfInvitation}
-                         onChange={handleInputChange}
-                         className='my-2 mx-2 md:mx-4'
-                         required 
-                          style={{margin:"10px 10px"}}
-                          />
+                          <div style={{ margin: '10px 10px' }}>
+                        <InputLabel>Do you have letter of invitation?</InputLabel>
+                        <Select
+                          name="orgLetterYesOrNo"
+                          value={inputValues.orgLetterYesOrNo}
+                          onChange={handleInputChange}
+                          className="my-2 mx-2 md:mx-4"
+                          fullWidth
+                        >
+                          <MenuItem value="no">No</MenuItem>
+                          <MenuItem value="yes">Yes</MenuItem>
+                        </Select>
+                         </div>
                         </>
                       )}
                        {activeStep === 6 && (
@@ -407,23 +508,35 @@ const StepperWithInputFields = () => {
                         <>
                           <TextField
                             name="educationLevel"
-                            label="Company/Firm Name"
+                            label="Company/Business/Firm name"
                             value={inputValues.companyName}
                             onChange={handleInputChange}
                             className='my-2 mx-2 md:mx-4'
-                            required 
                              style={{margin:"10px 10px"}}
                           />
-                          <TextField
-                            name="comapnyDoc"
-                            label="Companny Doc Image"
-                            value={inputValues.companyDoc}
-                            onChange={handleInputChange}
-                           
-                            className='my-2 mx-2 md:mx-4'
-                            required 
-                             style={{margin:"10px 10px"}}
-                          />
+                           <div style={{ margin: '10px 10px' }}>
+                        <InputLabel>Do you have copy of Business registartion certificate?</InputLabel>
+                        <Select
+                          name="companyDocYesOrNo"
+                          value={inputValues.companyDocYesOrNo}
+                          onChange={handleInputChange}
+                          className="my-2 mx-2 md:mx-4"
+                          fullWidth
+                        >
+                          <MenuItem value="no">No</MenuItem>
+                          <MenuItem value="yes">Yes</MenuItem>
+                        </Select>
+                         </div>
+                         <div style={{ margin: '10px 10px' }}>
+                       <InputLabel>Company Registration Certificate</InputLabel>
+                       <input
+                         type="file"
+                         name="passportPhoto"
+                         onChange={handleFileInputChange}
+                         className="my-2 mx-2 md:mx-4"
+                         multiple // Allows selecting multiple files
+                       />
+                       </div>
                         </>
                       )}
                        {activeStep === 7 && (
@@ -435,27 +548,39 @@ const StepperWithInputFields = () => {
                             value={inputValues.nameOfSchool}
                             onChange={handleInputChange}
                             className='my-2 mx-2 md:mx-4'
-                            required 
                              style={{margin:"10px 10px"}}
                           />
                           <TextField
-                            name="addressPOfSchool"
+                            name="schoolAddress"
                             label="School Address"
                             value={inputValues.schoolAddress}
                             onChange={handleInputChange}
                             className='my-2 mx-2 md:mx-4'
-                            required 
                              style={{margin:"10px 10px"}}
                           />
-                               <TextField 
+                           <div style={{ margin: '10px 10px' }}>
+                        <InputLabel>Do you have letter of Admission?</InputLabel>
+                        <Select
+                          name="letterOfAdmissionYesOrNo"
+                          value={inputValues.letterOfAdmissionYesOrNo}
+                          onChange={handleInputChange}
+                          className="my-2 mx-2 md:mx-4"
+                          fullWidth
+                        >
+                          <MenuItem value="no">No</MenuItem>
+                          <MenuItem value="yes">Yes</MenuItem>
+                        </Select>
+                         </div>
+                         <div style={{ margin: '10px 10px' }}>
+                       <InputLabel>Letter of Admission</InputLabel>
+                       <input
+                         type="file"
                          name="letterOfAdmission"
-                         label="Letter Of Admission"
-                         value={inputValues.letterOfAdmission}
-                         onChange={handleInputChange}
-                         className='my-2 mx-2 md:mx-4'
-                         required 
-                          style={{margin:"10px 10px"}}
-                          />
+                         onChange={handleFileInputChange}
+                         className="my-2 mx-2 md:mx-4"
+                         multiple // Allows selecting multiple files
+                       />
+                       </div>
                         </>
                       )}
                       
