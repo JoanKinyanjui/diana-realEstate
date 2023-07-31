@@ -651,7 +651,7 @@ const StepperWithInputFields = () => {
             className='py-2'
           />
        </div>
-       <div className='italic text-neutral-500 mx-auto text-sm py-2 md:text-md'>
+       <div className='italic text-neutral-500 mx-auto text-[11px] md:text-[14px] py-2 md:text-md'>
         
        {tickMessage}
        </div>
