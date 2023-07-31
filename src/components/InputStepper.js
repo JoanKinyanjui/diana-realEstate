@@ -3,6 +3,7 @@ import styles from '../styles/INdexhero.module.css'
 import { Stepper, Step, StepLabel, Button, Typography, TextField, Container, createTheme, ThemeProvider,Select, MenuItem, InputLabel} from '@mui/material';
 import ReactPhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css'; // Import the CSS for styling (optional)
+import { Checkbox, FormControlLabel } from '@mui/material';
 
 const steps = ['CohandlePhoneNoChanger Information', 'Passport Details', "Travel Details", 'Contact Person In Kenya Details(optional)','Organization Details (optional)','Company/Firm Details (optional)','Educational Details (optional)'];
 
@@ -98,10 +99,22 @@ const StepperWithInputFields = () => {
     setSelectedFiles([...files]);
   };
 
+// SUBMIT INFORMATION
+
+
+  const [declarationChecked, setDeclarationChecked] = useState(false);
+  const [termsChecked, setTermsChecked] = useState(false);
+  const [tickMessage,setTickMessage] = useState('')
 
   const handleSubmit = () => {
     console.log('Submitting input values');
+    if (!declarationChecked || !termsChecked) {
+      setTickMessage("Please check both checkboxes before submitting.");
+      return;
+    }
+    console.log('Submitting input values');
   };
+ 
 
   return (
 <div className='md:w-3/4 w-10/12 grid  mx-auto py-8' id="section5">
@@ -611,8 +624,35 @@ const StepperWithInputFields = () => {
             ))}
           </Stepper>
         </div>
-        <div className='w-full place-content-center flex py-12'>
-      <button className={`${styles.ButtonsDiv}`}>Submit</button>
+        <div className='w-full place-content-center grid py-12'>
+       <div className='grid'>
+       <FormControlLabel
+            control={
+              <Checkbox
+                checked={declarationChecked}
+                onChange={(e) => setDeclarationChecked(e.target.checked)}
+                name="declarationCheckbox"
+                color="primary"
+              />
+            }
+            label="I declare that the information I have given in this application is truthful, complete, and correct."
+          />
+        <FormControlLabel
+            control={
+              <Checkbox
+                checked={termsChecked}
+                onChange={(e) => setTermsChecked(e.target.checked)}
+                name="termsCheckbox"
+                color="primary"
+              />
+            }
+            label="I have read and understood the terms and conditions and privacy policy."
+          />
+       </div>
+       <div className='italic text-neutral-500 mx-auto'>
+      (  {tickMessage})
+       </div>
+      <button className={`${styles.ButtonsDiv} mx-auto mt-8`} onClick={handleSubmit} >Submit</button>
     </div>
       </Container>
     </ThemeProvider>
