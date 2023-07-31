@@ -4,7 +4,7 @@ import { Stepper, Step, StepLabel, Button, Typography, TextField, Container, cre
 import ReactPhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css'; // Import the CSS for styling (optional)
 
-const steps = ['Contact', 'Traveller Information', 'Passport Details', "Travel Details", 'Contact Person In Kenya Details(optional)','Organization Details (optional)','Company/Firm Details (optional)','Educational Details (optional)'];
+const steps = ['CohandlePhoneNoChanger Information', 'Passport Details', "Travel Details", 'Contact Person In Kenya Details(optional)','Organization Details (optional)','Company/Firm Details (optional)','Educational Details (optional)'];
 
 // Create a custom theme with the primary color set to pink
 const customTheme = createTheme({
@@ -85,8 +85,14 @@ const StepperWithInputFields = () => {
     }));
   };
 
-  const [selectedFiles, setSelectedFiles] = useState([]);
+  const handlePhoneNoChange = (value) => {
+    setInputValues((prevValues) => ({
+      ...prevValues,
+      phoneNo: value,
+    }));
+  }; 
 
+  const [selectedFiles, setSelectedFiles] = useState([]);
   const handleFileInputChange = (event) => {
     const { files } = event.target;
     setSelectedFiles([...files]);
@@ -124,21 +130,12 @@ const StepperWithInputFields = () => {
                             required 
                              style={{margin:"10px 10px"}}
                           />
-                          <TextField 
-                           name="confirm email"
-                           label="Confirm Email"
-                         value={inputValues.email}
-                         onChange={handleInputChange}
-                         required 
-                          style={{margin:"10px 10px"}}
-                         className='my-2 mx-2 md:mx-4'
-                          />
                            <div style={{ margin: '10px 10px' }}>
                            <InputLabel htmlFor='contactPhoneNo'>phone number/ cell/mobile</InputLabel>
                           <ReactPhoneInput
                             defaultCountry="us" // Set the default country (optional)
                             value={inputValues.phoneNo}
-                            onChange={handleInputChange}
+                            onChange={handlePhoneNoChange}
                             required
                             inputExtraProps={{
                               name: 'phoneNo',
@@ -230,7 +227,7 @@ const StepperWithInputFields = () => {
                           <ReactPhoneInput
                             defaultCountry="us" // Set the default country (optional)
                             value={inputValues.phoneNoOfNextKin}
-                            onChange={handleInputChange}
+                            onChange={handlePhoneNoChange}
                             required
                             inputExtraProps={{
                               name: 'phoneNoOfNextKin',
@@ -424,7 +421,7 @@ const StepperWithInputFields = () => {
                           <ReactPhoneInput
                             defaultCountry="us" // Set the default country (optional)
                             value={inputValues.contactPhoneNo}
-                            onChange={handleInputChange}
+                            onChange={handlePhoneNoChange}
                             inputExtraProps={{
                               name: 'contactPhoneNo',
                               label: 'Contact phone Number',
