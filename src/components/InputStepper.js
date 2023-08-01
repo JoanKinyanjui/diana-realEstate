@@ -3,9 +3,9 @@ import styles from '../styles/INdexhero.module.css'
 import { Stepper, Step, StepLabel, Button, Typography, TextField, Container, createTheme, ThemeProvider,Select, MenuItem, InputLabel} from '@mui/material';
 import ReactPhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css'; // Import the CSS for styling (optional)
-import { Checkbox, FormControlLabel } from '@mui/material';
+import { Checkbox, FormControlLabel} from '@mui/material';
 
-const steps = ['CohandlePhoneNoChanger Information', 'Passport Details', "Travel Details", 'Contact Person In Kenya Details(optional)','Organization Details (optional)','Company/Firm Details (optional)','Educational Details (optional)'];
+const steps = ['Personal Information', 'Passport Details', "Travel Details", 'Contact Person In Kenya Details(optional)','Organization Details (optional)','Company/Firm Details (optional)','Educational Details (optional)'];
 
 // Create a custom theme with the primary color set to pink
 const customTheme = createTheme({
@@ -115,7 +115,6 @@ const StepperWithInputFields = () => {
     console.log('Submitting input values');
     setTickMessage('')
   };
- 
 
   return (
 <div className='md:w-3/4 w-10/12 grid  mx-auto py-8' id="section5">
@@ -142,7 +141,13 @@ const StepperWithInputFields = () => {
                             value={inputValues.email}
                             onChange={handleInputChange}
                             required 
-                             style={{margin:"10px 10px"}}
+                             style={{margin:"5px 10px"}}
+                             sx={{
+                              width:{xs:'100%', md:'auto'},
+                              margin: { xs: '0px 5px' },
+                              
+                             }}
+                             fullWidth
                           />
                            <div style={{ margin: '10px 10px' }}>
                            <InputLabel htmlFor='contactPhoneNo'>phone number/ cell/mobile</InputLabel>
@@ -170,7 +175,12 @@ const StepperWithInputFields = () => {
                           value={inputValues.surname}
                           onChange={handleInputChange}
                           required 
-                           style={{margin:"10px 10px"}}
+                           style={{margin:"5px 10px"}}
+                           sx={{
+                            width:{xs:'100%', md:'auto'},
+                             margin: { xs: '10px 0' },
+                             
+                           }}
                           className='my-2 mx-2 md:mx-4'
                           />
                           <TextField 
@@ -179,7 +189,12 @@ const StepperWithInputFields = () => {
                        value={inputValues.middleName}
                        onChange={handleInputChange}
                        required 
-                        style={{margin:"10px 10px"}}
+                        style={{margin:"5px 10px"}}
+                        sx={{
+                          width:{xs:'100%', md:'auto'},
+                           margin: { xs: '10px 0' },
+                           
+                        }}
                        className='my-2 mx-2 md:mx-4'
                           />
                             <TextField 
@@ -188,7 +203,12 @@ const StepperWithInputFields = () => {
                        value={inputValues.givenNames}
                        onChange={handleInputChange}
                        required 
-                        style={{margin:"10px 10px"}}
+                        style={{margin:"5px 10px"}}
+                        sx={{
+                          width:{xs:'100%', md:'auto'},
+                           margin: { xs: '10px 0' },
+                           
+                        }}
                        className='my-2 mx-2 md:mx-4'
                           />
                            <TextField 
@@ -197,7 +217,12 @@ const StepperWithInputFields = () => {
                        value={inputValues.dateOFBirth}
                        onChange={handleInputChange}
                        required 
-                        style={{margin:"10px 10px"}}
+                        style={{margin:"5px 10px"}}
+                        sx={{
+                          width:{xs:'100%', md:'auto'},
+                           margin: { xs: '10px 0' },
+                           
+                        }}
                        className='my-2 mx-2 md:mx-4'
                           />
                             <TextField 
@@ -206,7 +231,12 @@ const StepperWithInputFields = () => {
                         value={inputValues.nationality}
                         onChange={handleInputChange}
                         required 
-                         style={{margin:"10px 10px"}}
+                         style={{margin:"5px 10px"}}
+                         sx={{
+                          width:{xs:'100%', md:'auto'},
+                           margin: { xs: '10px 0' },
+                           
+                         }}
                         className='my-2 mx-2 md:mx-4'
                           />
                             <TextField 
@@ -215,7 +245,12 @@ const StepperWithInputFields = () => {
                        value={inputValues.countryOfResidence}
                        onChange={handleInputChange}
                        required 
-                        style={{margin:"10px 10px"}}
+                        style={{margin:"5px 10px"}}
+                        sx={{
+                          width:{xs:'100%', md:'auto'},
+                           margin: { xs: '10px 0' },
+                           
+                        }}
                        className='my-2 mx-2 md:mx-4'
                           />
                             <TextField 
@@ -224,7 +259,12 @@ const StepperWithInputFields = () => {
                         value={inputValues.physicalAddress}
                         onChange={handleInputChange}
                         required 
-                         style={{margin:"10px 10px"}}
+                         style={{margin:"5px 10px"}}
+                         sx={{
+                          width:{xs:'100%', md:'auto'},
+                           margin: { xs: '10px 0' },
+                           
+                         }}
                         className='my-2 mx-2 md:mx-4'
                           />
                             <TextField 
@@ -233,7 +273,12 @@ const StepperWithInputFields = () => {
                        value={inputValues.nextOfKin}
                        onChange={handleInputChange}
                        required 
-                        style={{margin:"10px 10px"}}
+                        style={{margin:"5px 10px"}}
+                        sx={{
+                          width:{xs:'100%', md:'auto'},
+                           margin: { xs: '10px 0' },
+                           
+                        }}
                        className='my-2 mx-2 md:mx-4' 
                        />
                          <div style={{ margin: '10px 10px' }}>
@@ -274,7 +319,12 @@ const StepperWithInputFields = () => {
                             value={inputValues.passportNumber}
                             onChange={handleInputChange}
                             required 
-                             style={{margin:"10px 10px"}}
+                             style={{margin:"5px 10px"}}
+                             sx={{
+                              width:{xs:'100%', md:'auto'},
+                               margin: { xs: '10px 0' },
+                               
+                             }}
                             className='my-2 mx-2 md:mx-4'
                           />
                         <TextField
@@ -283,7 +333,12 @@ const StepperWithInputFields = () => {
                             value={inputValues.countryOfPassport}
                             onChange={handleInputChange}
                             required 
-                             style={{margin:"10px 10px"}}
+                             style={{margin:"5px 10px"}}
+                             sx={{
+                              width:{xs:'100%', md:'auto'},
+                               margin: { xs: '10px 0' },
+                               
+                             }}
                             className='my-2 mx-2 md:mx-4'
                           />
                           <TextField
@@ -292,7 +347,12 @@ const StepperWithInputFields = () => {
                             value={inputValues.countryOfPassport}
                             onChange={handleInputChange}
                             required 
-                             style={{margin:"10px 10px"}}
+                             style={{margin:"5px 10px"}}
+                             sx={{
+                              width:{xs:'100%', md:'auto'},
+                               margin: { xs: '10px 0' },
+                               
+                             }}
                             className='my-2 mx-2 md:mx-4'
                           />
                           <TextField
@@ -302,7 +362,12 @@ const StepperWithInputFields = () => {
                             onChange={handleInputChange}
                             className='my-2 mx-2 md:mx-4'
                             required 
-                             style={{margin:"10px 10px"}}
+                             style={{margin:"5px 10px"}}
+                             sx={{
+                              width:{xs:'100%', md:'auto'},
+                               margin: { xs: '10px 0' },
+                               
+                             }}
                           />
                             <TextField 
                          name="passportExpiryDate"
@@ -310,7 +375,12 @@ const StepperWithInputFields = () => {
                        value={inputValues.passportExpiryDate}
                        onChange={handleInputChange}
                        required 
-                        style={{margin:"10px 10px"}}
+                        style={{margin:"5px 10px"}}
+                        sx={{
+                          width:{xs:'100%', md:'auto'},
+                           margin: { xs: '10px 0' },
+                           
+                        }}
                        className='my-2 mx-2 md:mx-4'
                           />
                           <div style={{ margin: '10px 10px' }}>
@@ -337,7 +407,12 @@ const StepperWithInputFields = () => {
                            
                             className='my-2 mx-2 md:mx-4'
                             required 
-                             style={{margin:"10px 10px"}}
+                             style={{margin:"5px 10px"}}
+                             sx={{
+                              width:{xs:'100%', md:'auto'},
+                               margin: { xs: '10px 0' },
+                               
+                             }}
                           />
                           <TextField
                             name="intendedDateOfEntry"
@@ -346,7 +421,12 @@ const StepperWithInputFields = () => {
                             onChange={handleInputChange}
                             className='my-2 mx-2 md:mx-4'
                             required 
-                             style={{margin:"10px 10px"}}
+                             style={{margin:"5px 10px"}}
+                             sx={{
+                              width:{xs:'100%', md:'auto'},
+                               margin: { xs: '10px 0' },
+                               
+                             }}
                           />
                             <TextField 
                            name="intendedDatteOfExit"
@@ -355,7 +435,12 @@ const StepperWithInputFields = () => {
                            onChange={handleInputChange}
                            className='my-2 mx-2 md:mx-4'
                            required 
-                            style={{margin:"10px 10px"}}
+                            style={{margin:"5px 10px"}}
+                            sx={{
+                              width:{xs:'100%', md:'auto'},
+                               margin: { xs: '10px 0' },
+                               
+                            }}
                           />
                             <TextField 
                            name="portOfEntry"
@@ -364,7 +449,12 @@ const StepperWithInputFields = () => {
                            onChange={handleInputChange}
                            className='my-2 mx-2 md:mx-4'
                            required 
-                            style={{margin:"10px 10px"}}
+                            style={{margin:"5px 10px"}}
+                            sx={{
+                              width:{xs:'100%', md:'auto'},
+                               margin: { xs: '10px 0' },
+                               
+                            }}
                           />
                           <div style={{ margin: '10px 10px' }}>
                         <InputLabel>Have You Been to Kenya before?</InputLabel>
@@ -419,7 +509,12 @@ const StepperWithInputFields = () => {
                          value={inputValues.contactName}
                          onChange={handleInputChange}
                          className='my-2 mx-2 md:mx-4' 
-                          style={{margin:"10px 10px"}}
+                          style={{margin:"5px 10px"}}
+                          sx={{
+                            width:{xs:'100%', md:'auto'},
+                             margin: { xs: '10px 0' },
+                             
+                          }}
                           />
                             <TextField 
                          name="alienCard"
@@ -428,7 +523,12 @@ const StepperWithInputFields = () => {
                          onChange={handleInputChange}
                          className='my-2 mx-2 md:mx-4'
                          required 
-                          style={{margin:"10px 10px"}}
+                          style={{margin:"5px 10px"}}
+                          sx={{
+                            width:{xs:'100%', md:'auto'},
+                             margin: { xs: '10px 0' },
+                             
+                          }}
                           />
                            <div style={{ margin: '10px 10px' }}>
                             <InputLabel htmlFor='contactPhoneNo'>phone number of contact</InputLabel>
@@ -481,7 +581,12 @@ const StepperWithInputFields = () => {
                             value={inputValues.orgName}
                             onChange={handleInputChange}
                             className='my-2 mx-2 md:mx-4'
-                             style={{margin:"10px 10px"}}
+                             style={{margin:"5px 10px"}}
+                             sx={{
+                              width:{xs:'100%', md:'auto'},
+                               margin: { xs: '10px 0' },
+                               
+                             }}
                           />
                           <TextField
                             name="orgAddress"
@@ -489,7 +594,12 @@ const StepperWithInputFields = () => {
                             value={inputValues.orgAddress}
                             onChange={handleInputChange}
                             className='my-2 mx-2 md:mx-4'
-                             style={{margin:"10px 10px"}}
+                             style={{margin:"5px 10px"}}
+                             sx={{
+                              width:{xs:'100%', md:'auto'},
+                               margin: { xs: '10px 0' },
+                               
+                             }}
                           />
                             <TextField 
                              name="orgPerson"
@@ -497,7 +607,12 @@ const StepperWithInputFields = () => {
                              value={inputValues.orgPerson}
                              onChange={handleInputChange}
                              className='my-2 mx-2 md:mx-4'
-                              style={{margin:"10px 10px"}}
+                              style={{margin:"5px 10px"}}
+                              sx={{
+                                width:{xs:'100%', md:'auto'},
+                                 margin: { xs: '10px 0' },
+                                 
+                              }}
                           />
                           <div style={{ margin: '10px 10px' }}>
                         <InputLabel>Do you have letter of invitation?</InputLabel>
@@ -523,7 +638,12 @@ const StepperWithInputFields = () => {
                             value={inputValues.companyName}
                             onChange={handleInputChange}
                             className='my-2 mx-2 md:mx-4'
-                             style={{margin:"10px 10px"}}
+                             style={{margin:"5px 10px"}}
+                             sx={{
+                              width:{xs:'100%', md:'auto'},
+                               margin: { xs: '10px 0' },
+                               
+                             }}
                           />
                            <div style={{ margin: '10px 10px' }}>
                         <InputLabel>Do you have copy of Business registartion certificate?</InputLabel>
@@ -559,7 +679,12 @@ const StepperWithInputFields = () => {
                             value={inputValues.nameOfSchool}
                             onChange={handleInputChange}
                             className='my-2 mx-2 md:mx-4'
-                             style={{margin:"10px 10px"}}
+                             style={{margin:"5px 10px"}}
+                             sx={{
+                              width:{xs:'100%', md:'auto'},
+                               margin: { xs: '10px 0' },
+                               
+                             }}
                           />
                           <TextField
                             name="schoolAddress"
@@ -567,7 +692,12 @@ const StepperWithInputFields = () => {
                             value={inputValues.schoolAddress}
                             onChange={handleInputChange}
                             className='my-2 mx-2 md:mx-4'
-                             style={{margin:"10px 10px"}}
+                             style={{margin:"5px 10px"}}
+                             sx={{
+                              width:{xs:'100%', md:'auto'},
+                               margin: { xs: '10px 0' },
+                               
+                             }}
                           />
                            <div style={{ margin: '10px 10px' }}>
                         <InputLabel>Do you have letter of Admission?</InputLabel>
@@ -636,8 +766,12 @@ const StepperWithInputFields = () => {
                 color="primary"
               />
             }
-            label="I declare that the information I have given in this application is truthful, complete, and correct."
-          />
+            label={
+              <Typography style={{fontSize:"15px"}}>
+          I declare that the information I have given in this application is truthful, complete, and correct.
+            </Typography>
+            }
+                    />
         <FormControlLabel
             control={
               <Checkbox
@@ -647,8 +781,12 @@ const StepperWithInputFields = () => {
                 color="primary"
               />
             }
-            label="I have read and understood the terms and conditions and privacy policy."
-            className='py-2'
+            label={
+              <Typography style={{fontSize:"15px"}}>
+              I have read and understood the terms and conditions and privacy policy.
+            </Typography>
+            }
+            className='py-2 '
           />
        </div>
        <div className='italic text-neutral-500 mx-auto text-[11px] md:text-[14px] py-2 md:text-md'>
