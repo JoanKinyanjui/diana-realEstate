@@ -4,8 +4,12 @@ import { Stepper, Step, StepLabel, Button, Typography, TextField, Container, cre
 import ReactPhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css'; // Import the CSS for styling (optional)
 import { Checkbox, FormControlLabel} from '@mui/material';
+import { DatePicker, LocalizationProvider } from '@mui/lab';
+import AdapterDateFns from '@mui/lab/AdapterDateFns';
+import enLocale from 'date-fns/locale/en-US';
 
-const steps = ['Personal Information', 'Passport Details', "Travel Details", 'Contact Person In Kenya Details(optional)','Organization Details (optional)','Company/Firm Details (optional)','Educational Details (optional)'];
+
+const steps = ['Personal Information', 'Applicant Details', "Travel Details", 'Contact Person In Kenya Details(optional)','Organization Details (optional)','Company/Firm Details (optional)','Educational Details (optional)'];
 
 // Create a custom theme with the primary color set to pink
 const customTheme = createTheme({
@@ -211,7 +215,26 @@ const StepperWithInputFields = () => {
                         }}
                        className='my-2 mx-2 md:mx-4'
                           />
-                           <TextField 
+                           <LocalizationProvider dateAdapter={AdapterDateFns} locale={enLocale}>
+      <DatePicker
+        name="dateOfBirth"
+        label="Date Of Birth"
+        value={inputValues.dateOfBirth}
+        onChange={(newValue) => setInputValues((prevInputValues) => ({ ...prevInputValues, dateOfBirth: newValue }))}
+        renderInput={(params) => (
+          <TextField
+            {...params}
+            style={{ margin: '5px 10px' }}
+            sx={{
+              width: { xs: '100%', md: 'auto' },
+              margin: { xs: '10px 0' },
+            }}
+          />
+        )}
+      />
+    </LocalizationProvider>
+ 
+                           {/* <TextField 
                          name="dateOfBirth"
                          label="Date Of Birth"
                        value={inputValues.dateOFBirth}
@@ -224,7 +247,7 @@ const StepperWithInputFields = () => {
                            
                         }}
                        className='my-2 mx-2 md:mx-4'
-                          />
+                          /> */}
                             <TextField 
                             name="nationality"
                           label="Nationality"

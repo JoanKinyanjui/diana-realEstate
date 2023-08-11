@@ -46,7 +46,17 @@ function Immigration() {
         <Guidance />
         <Laws />
         <Book />
-        <StepperWithInputFields />
+        {/* <StepperWithInputFields /> */}
+        <div style={{ width: '100%', height: '100vh', overflow: 'hidden' }}>
+      <iframe
+        width="100%"
+        height="100%"
+        src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAMAADNkVYpUNFVQQUVLS09CWDRSMksyRTBHSzFPQ0FZUy4u&embed=true"
+        frameBorder="0"
+        style={{ border: 'none' }}
+        allowFullScreen
+      ></iframe>
+    </div>
         </div>
         <div className={`flex place-content-end px-4 fixed bottom-1 right-0`}>
             <Whatsapp message='Hello ,I would like to know more about Immigration services'/>
