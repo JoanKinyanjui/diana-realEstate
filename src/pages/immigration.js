@@ -48,7 +48,7 @@ function Immigration() {
         <Laws />
         <Book />
         {/* <StepperWithInputFields /> */}
-        <div style={{ width: '100%', height: 'max-content' }}>
+        <div style={{ width: '100%', height: 'max-content' }}  className='mt-8'>
          <TypeFormEmbeded />
         </div>
         </div>
